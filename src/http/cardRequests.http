@@ -1,0 +1,68 @@
+### GET cards:
+GET http://localhost:8080/api/v1/cards
+
+### GET card by id:
+GET http://localhost:8080/api/v1/cards/658a9cf943d6421f4fcdd
+
+
+### POST create card:
+POST http://localhost:8080/api/v1/cards
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkVsaXNoZXZhQml6QGdtYWlsLmNvbSIsImlhdCI6MTcwMzU4NDAxOH0.omx-G0FabKCVHtSKkztwyZrHu_eBXkT3jSvuwGu20GE
+Content-Type: application/json
+
+{
+  "title": "eden and elisheva",
+  "subtitle":"3",
+  "description":"hellooooooo",
+  "web":"www.fsgsf.co.il",
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "country": "Israel",
+    "houseNumber": 20,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "Way@batcave.com"
+}
+
+
+
+### PUT edit cards:
+PUT http://localhost:8080/api/v1/cards/658aa168235553639b2eefc8
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkVkZW5CdXNpbmVzc0BnbWFpbC5jb20iLCJpYXQiOjE3MDI5MDA2MjR9.xlfI2qJ9gzPA7tRbkXsYydYEPfqpQA6CLltuLZQfqtk
+Content-Type: application/json
+
+{
+  "title": "eden and elisheva!!!!!!!!!",
+  "subtitle":"3",
+  "description":"hellooooooo",
+  "web":"www.fsgsf.co.il",
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "country": "Israel",
+    "houseNumber": 20,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "Way@batcave.com"
+}
+
+### GET my cards:
+GET http://localhost:8080/api/v1/cards/my-cards
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkVsaXNoZXZhQml6QGdtYWlsLmNvbSIsImlhdCI6MTcwMzU4NjM2N30.wIBQDicXfuQ_tn8AbvwmcdKtzYyup-3AhK2mbNiuvWU
+
+
+### PATCH like cards:
+PATCH  http://localhost:8080/api/v1/cards/658a9cf943d6421f4fcdd3cb
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkVsaXNoZXZhQml6QGdtYWlsLmNvbSIsImlhdCI6MTcwMzU4NDAxOH0.omx-G0FabKCVHtSKkztwyZrHu_eBXkT3jSvuwGu20GE
+Content-Type: application/json

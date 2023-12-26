@@ -1,0 +1,80 @@
+### GET All users:
+GET http://localhost:8080/api/v1/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcwMzU4NjQ4NX0.wOeYmL4oLUN6CRbPsnG_Va36EjrEIbr4r7VS9HBPvoc
+
+### Add a user:
+POST http://localhost:8080/api/v1/users
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "Bruce",
+    "last": "Willis"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "country": "Israel",
+    "houseNumber": 20,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "Willis234@batcave.com",
+  "isBusiness": true,
+  "password": "123456aA!"
+}
+
+
+### Login:
+POST http://localhost:8080/api/v1/users/login
+Content-Type: application/json
+
+{
+  "email": "admin@gmail.com",
+  "password": "123456aA!"
+}
+
+### get user by id(usrers token or admin):
+GET http://localhost:8080/api/v1/users/658a9cf843d6421f4fcdd3b6
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTcwMzU4NjQ4NX0wOeYmL4oLUN6CRbPsnG_Va36EjrEIbr4r7VS9HBPvoc
+
+
+### PUT Edit user:
+PUT http://localhost:8080/api/v1/users/658a9cf843d6421f4fcdd3c4
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkRST1JJQGJhdGNhdmUuY29tIiwiaWF0IjoxNzAzMTU0NjI0fQ.4FzMV4CUu24FOgBdVkqSnmxfqD7ObeaLEwq7d3Ax2ZY
+Content-Type: application/json
+
+{
+  "name": {
+    "first": "Elisheva!",
+    "last": "Business!"
+  },
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "country": "Israel",
+    "houseNumber": 20,
+    "zip": "12345"
+  },
+  "image": {
+    "alt": "user-profile",
+    "url": "https://picsum.photos/200/300"
+  },
+  "phone": "050-8123091",
+  "email": "ElishevaBiz@gmail.com",
+  "isBusiness": true,
+  "password": "123456aA!" 
+}
+
+### DELETE user:
+DELETE http://localhost:8080/api/v1/users/658a9cf843d6421f4fcdd3bd
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkRST1JJQGJhdGNhdmUuY29tIiwiaWF0IjoxNzAzMTU0NjI0fQ.4FzMV4CUu24FOgBdVkqSnmxfqD7ObeaLEwq7d3Ax2ZY
+
+
+### PATCH user change isBizz status:
+PATCH http://localhost:8080/api/v1/users/658a9cf843d6421f4fcdd3bd
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkVsaXNoZXZhQml6QGdtYWlsLmNvbSIsImlhdCI6MTcwMzU5NDUwMX0.wn9MHm71lYxudpVXHhQwQAkzvXEVn-SVbVx57RNuKrE
