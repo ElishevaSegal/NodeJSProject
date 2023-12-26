@@ -14,7 +14,7 @@ An admin user can view and edit user details, delete cards, and manage the infor
 
 For the convenience of understanding and easy accessibility of request types, I've prepared a dedicated Postman link where you can see all types of requests, read documentation, receive details of an admin user to perform management operations, and more. You're invited to explore and get comprehensive information about the types of requests available.
 
-Postman Cards documentation Link:
+Postman Cards documentation Link:https://documenter.getpostman.com/view/29582989/2s9Ykq71MS
 
 Postman Users documentation Link:  https://documenter.getpostman.com/view/29583018/2s9Ykq71MT
 
