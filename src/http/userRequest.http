@@ -34,7 +34,7 @@ POST http://localhost:8080/api/v1/users/login
 Content-Type: application/json
 
 {
-  "email": "admin@gmail.com",
+  "email": "Wayne@batcave.com",
   "password": "123456aA!"
 }
 
@@ -44,8 +44,8 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQ
 
 
 ### PUT Edit user:
-PUT http://localhost:8080/api/v1/users/658a9cf843d6421f4fcdd3c4
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkRST1JJQGJhdGNhdmUuY29tIiwiaWF0IjoxNzAzMTU0NjI0fQ.4FzMV4CUu24FOgBdVkqSnmxfqD7ObeaLEwq7d3Ax2ZY
+PUT http://localhost:8080/api/v1/users/658aaae6235553639b2ef00c
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IldheW5lQGJhdGNhdmUuY29tIiwiaWF0IjoxNzAzNzU4MjE5fQ.Fz_q7L5oE7fPh-0mTFR1iuyrWEsXSybJ8VHxqhVCMa0
 Content-Type: application/json
 
 {
@@ -65,7 +65,7 @@ Content-Type: application/json
     "url": "https://picsum.photos/200/300"
   },
   "phone": "050-8123091",
-  "email": "ElishevaBiz@gmail.com",
+  "email": "WalliceBiz@gmail.com",
   "isBusiness": true,
   "password": "123456aA!" 
 }

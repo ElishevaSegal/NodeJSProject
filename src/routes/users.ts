@@ -33,11 +33,11 @@ router.put("/:id", isUser, validateUserRegistration, async (req, res, next) => {
   try{
   //hash the password:
   req.body.password = await auth.hashPassword(req.body.password);
-  const { password, ...savedUser } = await User.findByIdAndUpdate(
+  const { password, ...savedUser } = (await User.findByIdAndUpdate(
     { _id: req.params.id },
     req.body,
     { new: true }
-  );
+  ).lean()) as IUser;;
   
   if(!savedUser){
     throw new BizCardsError("User not found", 404);
